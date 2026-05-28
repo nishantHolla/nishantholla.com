@@ -1,0 +1,85 @@
+{#once <style>
+
+.cmpt-navigation {
+    display: flex;
+    flex-flow: column;
+    gap: 0.4rem;
+}
+
+.cmpt-navigation-toggle,
+.cmpt-navigation-bar {
+    display: none;
+}
+
+.cmpt-navigation-bar-open {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+@media (max-width: 768px) {
+    .cmpt-navigation-toggle {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .cmpt-navigation-bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+    }
+}
+
+</style> }
+
+<div class="cmpt-navigation">
+    <span class="cmpt-navigation-toggle">{#include ./action.html body="Navigation"}</span>
+    <nav class="cmpt-navigation-bar">
+        <button data-nav-to="about-me">{#include ./action.html body="About Me"}</button>
+        <button data-nav-to="education">{#include ./action.html body="Education"}</button>
+        <button data-nav-to="activities">{#include ./action.html body="Activities"}</button>
+        <button data-nav-to="projects">{#include ./action.html body="Projects"}</button>
+    </nav>
+</div>
+
+{#once <script>
+
+
+const Navigations = document.getElementsByClassName("cmpt-navigation");
+
+for (navigation of Navigations) {
+    const nav_toggle = navigation.querySelector(".cmpt-navigation-toggle");
+    const nav_bar = navigation.querySelector(".cmpt-navigation-bar");
+
+    nav_toggle.addEventListener("click", () => {
+        if (nav_bar.classList.contains("cmpt-navigation-bar-open")) {
+            nav_toggle.querySelector(".cmpt-action").dataset.isActive = "0";
+            nav_bar.classList.remove("cmpt-navigation-bar-open");
+        }
+        else {
+            console.log("Ok");
+            nav_toggle.querySelector(".cmpt-action").dataset.isActive = "1";
+            nav_bar.classList.add("cmpt-navigation-bar-open");
+        }
+    })
+
+    for (const child of nav_bar.children) {
+        const nav_to = child.dataset.navTo;
+        child.addEventListener("click", () => {
+            scrollTo(nav_to);
+        })
+    }
+}
+
+function scrollTo(id) {
+    const element = document.querySelector(`#${id}`);
+    if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    else {
+        console.log("Could not find element with id " + id);
+    }
+}
+
+</script> }

@@ -1,5 +1,4 @@
-{#once
-<style>
+{#once <style>
 
 .cmpt-action {
     font-family: "IBM_Plex_Mono";
@@ -7,7 +6,8 @@
     border-bottom: 2px dotted;
 }
 
-.cmpt-action:hover {
+.cmpt-action:hover,
+.cmpt-action[data-is-active="1"] {
     svg {
         fill: var(--clr-primary);
     }
@@ -23,8 +23,7 @@
     fill: currentColor;
 }
 
-</style>
-}
+</style> }
 
 <span class="cmpt-action">
     <svg class="cmpt-action-icon" xmlns="http://www.w3.org/2000/svg"
