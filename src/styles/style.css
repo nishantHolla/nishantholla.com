@@ -96,3 +96,15 @@ body {
     transition: background 130ms linear, color 130ms linear;
     font-family: "IBM_Plex", Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
 }
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        padding: 2rem;
+    }
+}
