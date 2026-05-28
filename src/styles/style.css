@@ -3,21 +3,25 @@
 /* --- COLORS -- */
 
 :root {
-    --clr-lighter: #e2e8f0;
-    --clr-light:   #cbd5e1;
-    --clr-mid:     #94a3b8;
-    --clr-dark:    #0f172a;
-    --clr-darker:  #020617;
+    --clr-lighter:       #e2e8f0;
+    --clr-light:         #cbd5e1;
+    --clr-mid:           #94a3b8;
+    --clr-dark:          #0f172a;
+    --clr-darker:        #020617;
 }
 
 body[data-theme="dark"] {
     background: var(--clr-darker);
     color: var(--clr-light);
+
+    --clr-primary: #67e8f9;
 }
 
 body[data-theme="light"] {
     background: var(--clr-light);
     color: var(--clr-darker);
+
+    --clr-primary:  #0e7490;
 }
 
 /* --- FONTS --- */
@@ -78,4 +82,17 @@ body[data-theme="light"] {
 
 .font-sans {
     font-family: "IBM_Plex_Sans";
+}
+
+/* --- Styles --- */
+
+button {
+    background: transparent;
+    border: none;
+    color: inherit;
+}
+
+body {
+    transition: background 130ms linear, color 130ms linear;
+    font-family: "IBM_Plex", Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
 }

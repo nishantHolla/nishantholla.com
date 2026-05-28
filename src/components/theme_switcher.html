@@ -1,0 +1,20 @@
+<button class="cmpt-theme-switcher">{#include ./action.html body="Go light"}</button>
+
+{#once
+<script defer>
+
+let ThemeSwitchers = document.getElementsByClassName("cmpt-theme-switcher");
+
+
+for (const switcher of ThemeSwitchers) {
+
+    switcher.addEventListener("click", () => {
+        let current_theme = document.body.dataset.theme;
+        let new_theme = (current_theme === "dark") ? "light" : "dark";
+
+        document.body.dataset.theme = new_theme;
+    })
+}
+
+</script>
+}
