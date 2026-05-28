@@ -84,6 +84,14 @@ body[data-theme="light"] {
     font-family: "IBM_Plex_Sans";
 }
 
+.font-400 {
+    font-weight: 400;
+}
+
+.font-700 {
+    font-weight: 700;
+}
+
 /* --- Styles --- */
 
 button {
@@ -94,7 +102,7 @@ button {
 
 body {
     transition: background 130ms linear, color 130ms linear;
-    font-family: "IBM_Plex", Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
+    font-family: "IBM_Plex_Sans", Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
 }
 
 @media (max-width: 768px) {

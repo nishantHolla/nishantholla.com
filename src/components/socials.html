@@ -1,0 +1,27 @@
+{#once <style>
+
+.cmpt-socials {
+    display: flex;
+    gap: 0.8rem;
+
+    a, a:visited {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+</style>}
+
+<div class="cmpt-socials">
+    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/nishant-holla">
+        {#include ./action.html body="LinkedIn"}
+    </a>
+
+    <a target="_blank" rel="noopener noreferrer" href="https://github.com/nishantHolla">
+        {#include ./action.html body="Github"}
+    </a>
+
+    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/nishantholla">
+        {#include ./action.html body="Instagram"}
+    </a>
+</div>
