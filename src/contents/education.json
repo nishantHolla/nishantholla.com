@@ -1,0 +1,19 @@
+[
+    {
+        "title": "PES University",
+        "text": "Completing my Bachelor of Technology (B.Tech) at PES University.",
+        "subjects": ["Computer Science"]
+    },
+
+    {
+        "title": "RV PU College",
+        "text": "Completed my Pre University at RV PU College.",
+        "subjects": ["Mathematics", "Physics", "Chemistry", "Electronics", "English", "Hindi"]
+    },
+
+    {
+        "title": "The Oxford Senior Secondary School",
+        "text": "Completed my schooling at The Oxford Senior Secondary School.",
+        "subjects": ["Mathematics", "Science", "Social Science", "English", "Hindi", "Kannada"]
+    }
+]

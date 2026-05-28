@@ -131,8 +131,14 @@ p {
     display: flex;
     flex-flow: column;
     align-items: center;
+    gap: 4rem;
 
     section {
         max-width: 800px;
+        width: 100%;
     }
+}
+
+.no-pad {
+    padding: 0;
 }

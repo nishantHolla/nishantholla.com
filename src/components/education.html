@@ -1,0 +1,79 @@
+{#once <style>
+
+.cmpt-education-container {
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+    padding-top: 20px;
+    margin: 0 2rem;
+}
+
+.cmpt-education-card {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 1rem;
+
+    display: flex;
+    flex-flow: column;
+    gap: 0.5rem;
+}
+
+.cmpt-education-title {
+    font-size: 1.5rem;
+}
+
+body[data-theme="dark"] .cmpt-education-card {
+    background: var(--clr-dark);
+    border-color: var(--clr-light);
+}
+
+body[data-theme="light"] .cmpt-education-card {
+    background: var(--clr-lighter);
+    border-color: var(--clr-dark);
+}
+
+.cmpt-education-subject-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.cmpt-education-subject {
+    padding: 2px 6px;
+    border-radius: 3px;
+    opacity: 0.8;
+}
+
+
+body[data-theme="dark"] .cmpt-education-subject {
+    background: var(--clr-light);
+    color: var(--clr-darker);
+}
+
+body[data-theme="light"] .cmpt-education-subject {
+    background: var(--clr-dark);
+    color: var(--clr-lighter);
+}
+
+</style>}
+
+<section id="education">
+    <h2 class="section-heading">Education</h2>
+
+    <div class="cmpt-education-container">
+        {#for i,j in ../contents/education.json
+        <div class="cmpt-education-card">
+            <h3 class="cmpt-education-title">{#value j.title}</h3>
+            <p class="cmpt-education-description no-pad">{#value j.text}</p>
+            <div class="cmpt-education-subject-list">
+            Subjects:
+            {#for k,l in j.subjects
+                <span class="cmpt-education-subject">{#value l}</span>
+            }
+            </div>
+        </div>
+        }
+    </div>
+
+</section>
