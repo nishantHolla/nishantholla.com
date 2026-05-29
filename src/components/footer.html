@@ -1,0 +1,71 @@
+{#once <style>
+
+footer {
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cmpt-footer-logo {
+    stroke: var(--clr-darker);
+}
+
+body[data-theme="dark"] .cmpt-footer-logo {
+    stroke: var(--clr-lighter);
+}
+
+@keyframes draw {
+
+to {
+    stroke-dashoffset: 0;
+}
+
+}
+
+.animate-stroke {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 20s ease-out forwards;
+}
+
+
+</style>}
+
+<footer>
+    <svg
+        id="animated-stroke"
+        width="200px"
+        height="160px"
+        viewBox="0 0 48 31"
+        fill="none"
+        class="cmpt-footer-logo"
+        stroke-width="0.5"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path d="M1 30.0003C13.5 19.5003 7.5 -1.99995 2.49993 1.50002C-1.93084 4.60147 27.5 27.5 22.5 29.5001C13.4862 33.1057 21.92 -0.581456 26.5 1.50002C32 3.99962 31.5033 7.99962 23.5033 4.49962C21.5033 3.62462 38.5 31 32.5 30.0003C20.7798 28.0477 51 4.49962 43 1.50002C35.8383 -1.18525 49 30.0003 47.5 30.0003L44 28.5" />
+    </svg>
+    <p class="no-pad font-700">Nishant Holla</p>
+    {#include ./socials.html}
+</footer>
+
+{#once <script>
+
+const observer = new IntersectionObserver(
+    ([entry]) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate-stroke');
+            observer.unobserve(entry.target); // Run only once
+        }
+    },
+    { threshold: 0.1 }
+);
+
+const svg = document.getElementById('animated-stroke');
+if (svg) {
+    observer.observe(svg);
+}
+
+</script>}
