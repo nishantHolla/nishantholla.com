@@ -9,6 +9,9 @@ for (const switcher of ThemeSwitchers) {
     switcher.addEventListener("click", () => {
         const current_theme = document.body.dataset.theme;
         const new_theme = (current_theme === "dark") ? "light" : "dark";
+        const new_text = (new_theme === "dark") ? "Go light" : "Go dark";
+
+        switcher.querySelector(".cmpt-action-body").innerText = new_text;
 
         document.body.dataset.theme = new_theme;
     })
