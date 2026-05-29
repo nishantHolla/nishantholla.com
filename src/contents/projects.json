@@ -1,42 +1,42 @@
 [
     {
         "title": "A* Visualizer",
-        "description": "<p>Built in C using the graphics library raylib, this project is an interactive visualizer for the A* search algorithm that demonstrates how heuristic-based pathfinding works on a grid. Users can place obstacles, define start and end points, and watch the algorithm explore possible paths in real time while dynamically computing the shortest route.</p><p>The project was designed as a hands-on way to explore algorithm visualization, graphics programming, and systems-level development in C. It combines efficient pathfinding logic with a responsive graphical interface to make the inner workings of A* intuitive and easy to understand.</p>",
+        "description": "<p>Built in C using the graphics library raylib, this project is an interactive visualizer for the A* search algorithm that demonstrates how heuristic-based pathfinding works on a grid. Users can place obstacles, define start and end points, and watch the algorithm explore possible paths in real time while dynamically computing the shortest route.</p>",
         "tags": ["C", "A* algorithm", "Raylib"],
         "github_link": "https://github.com/nishantHolla/a-star-visualizer",
         "language": "c"
     },
     {
         "title": "CHIP-8 Interpreter",
-        "description": "<p>This project is a CHIP-8 interpreter written in C that emulates the classic virtual machine used to run simple retro games. It implements the full instruction set, memory management, registers, timers, input handling, and display rendering, allowing original CHIP-8 ROMs to be executed and visualized.</p><p>The project provided hands-on experience with CPU emulation, opcode decoding, state management, and graphics rendering while reinforcing concepts such as bitwise operations and event-driven execution. It serves as both an exploration of emulator development and a demonstration of systems-level problem solving.</p>",
+        "description": "<p>This project is a CHIP-8 interpreter written in C that emulates the classic virtual machine used to run simple retro games. It implements the full instruction set, memory management, registers, timers, input handling, and display rendering, allowing original CHIP-8 ROMs to be executed and visualized.</p>",
         "tags": ["C", "Interpreter Design", "Emulation", "Systems Programming"],
         "github_link": "https://github.com/nishantHolla/chip8-interpreter",
         "language": "c"
     },
     {
         "title": "Neurite",
-        "description": "<p>Neurite is a lightweight neural network library built from scratch, designed to explore the core mechanics behind modern deep learning systems without relying on high-level frameworks. The project implements foundational components such as tensor operations, forward and backward propagation, gradient computation, and optimization routines, providing a transparent view into how neural networks are trained under the hood.</p><p>Built as a deep dive into machine learning internals, this project focuses on understanding the mathematical and systems-level foundations of neural networks by recreating them from first principles.</p>",
+        "description": "<p>Neurite is a lightweight neural network library built from scratch, designed to explore the core mechanics behind modern deep learning systems without relying on high-level frameworks. The project implements foundational components such as tensor operations, forward and backward propagation, gradient computation, and optimization routines, providing a transparent view into how neural networks are trained under the hood.</p>",
         "tags": ["C", "Machine Learning", "Neural Networks", "Algorithm Design"],
         "github_link": "https://github.com/nishantHolla/neurite",
         "language": "c"
     },
     {
         "title": "Raymond",
-        "description": "<p>Raymond is a lightweight 2D graphics and rendering library built in C, designed to provide a simple and efficient foundation for building graphical applications and visual systems. The project implements core rendering primitives, drawing utilities, and low-level graphics abstractions, focusing on performance and direct control over the rendering pipeline.</p><p>Built to deepen understanding of computer graphics and systems-level design, Raymond explores how graphical frameworks are structured beneath higher-level engines. It was built using Raytracing in one weekend as refrence.</p>",
+        "description": "<p>Raymond is a lightweight 2D graphics and rendering library built in C, designed to provide a simple and efficient foundation for building graphical applications and visual systems. The project implements core rendering primitives, drawing utilities, and low-level graphics abstractions, focusing on performance and direct control over the rendering pipeline.</p>",
         "tags": ["C++", "Graphics Programming", "Rendering Engine"],
         "github_link": "https://github.com/nishantHolla/raymond",
         "language": "cpp"
     },
     {
         "title": "WFC",
-        "description": "<p>WFC is an implementation of the Wave Function Collapse algorithm for procedural content generation, built to generate structured patterns from a set of input constraints. The project applies constraint propagation and entropy-based decision making to iteratively collapse possible states into coherent outputs, demonstrating how complex procedural generation can emerge from simple local rules</p><p>Built as an exploration of algorithmic generation and constraint-solving systems, this project focuses on translating a mathematically driven concept into an efficient visual implementation.</p>",
+        "description": "<p>WFC is an implementation of the Wave Function Collapse algorithm for procedural content generation, built to generate structured patterns from a set of input constraints. The project applies constraint propagation and entropy-based decision making to iteratively collapse possible states into coherent outputs, demonstrating how complex procedural generation can emerge from simple local rules</p>",
         "tags": ["C++", "Procedural Generation", "Algorithm Design", "Constraint Solving"],
         "github_link": "https://github.com/nishantHolla/wfc",
         "language": "cpp"
     },
     {
         "title": "marl-football",
-        "description": "<p>MARL Football is a multi-agent reinforcement learning project focused on training autonomous agents to learn cooperative strategies in a simulated football environment. The project explores how multiple agents can interact, coordinate, and optimize decision-making through reinforcement learning techniques, enabling emergent team-based behaviors in a dynamic competitive setting.</p><p>Built as an exploration of applied machine learning and distributed decision systems, this project demonstrates practical experience with reinforcement learning pipelines, environment simulation, reward optimization, and agent coordination.</p>",
+        "description": "<p>MARL Football is a multi-agent reinforcement learning project focused on training autonomous agents to learn cooperative strategies in a simulated football environment. The project explores how multiple agents can interact, coordinate, and optimize decision-making through reinforcement learning techniques, enabling emergent team-based behaviors in a dynamic competitive setting.</p>",
         "tags": ["Python", "Reinforcement Learning", "Multi-Agent Systems"],
         "github_link": "https://github.com/nishantHolla/marl-football",
         "language": "python"
