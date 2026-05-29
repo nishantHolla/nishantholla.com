@@ -1,0 +1,156 @@
+{#once <style>
+
+.cmpt-projects-container {
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+    padding-top: 20px;
+    margin: 0 2rem;
+}
+
+@media (max-width: 768px) {
+    .cmpt-projects-container {
+        margin: 0;
+    }
+}
+
+.cmpt-projects-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cmpt-projects-language-list {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.cmpt-projects-card {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 1rem;
+
+    display: flex;
+    flex-flow: column;
+    gap: 0.5rem;
+}
+
+.cmpt-projects-title {
+    font-size: 1.5rem;
+}
+
+body[data-theme="dark"] .cmpt-projects-card {
+    background: var(--clr-dark);
+    border-color: var(--clr-light);
+}
+
+body[data-theme="light"] .cmpt-projects-card {
+    background: var(--clr-lighter);
+    border-color: var(--clr-dark);
+}
+
+.cmpt-projects-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 20px 0;
+}
+
+.cmpt-projects-tag {
+    padding: 2px 6px;
+    border-radius: 3px;
+    opacity: 0.8;
+}
+
+body[data-theme="dark"] .cmpt-projects-tag {
+    background: var(--clr-light);
+    color: var(--clr-darker);
+}
+
+body[data-theme="light"] .cmpt-projects-tag {
+    background: var(--clr-dark);
+    color: var(--clr-lighter);
+}
+
+.cmpt-projects-link {
+    align-self: start;
+}
+
+.cmpt-projects-more {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+</style>}
+
+<section id="projects">
+    <div class="cmpt-projects-header">
+        <h2 class="section-heading">Projects</h2>
+        <div class="cmpt-projects-language-list">
+            <button class="cmpt-projects-language-button" data-language="c">{#include ./action.html body="C"}</button>
+            <button class="cmpt-projects-language-button" data-language="cpp">{#include ./action.html body="C++"}</button>
+            <button class="cmpt-projects-language-button" data-language="python">{#include ./action.html body="Python"}</button>
+        </div>
+    </div>
+
+    <div class="cmpt-projects-container">
+        {#for i,j in ../contents/projects.json
+        <div class="cmpt-projects-card" data-language="{#value j.language}">
+            <h3 class="cmpt-projects-title">{#value j.title}</h3>
+            {#value j.description}
+            <div class="cmpt-projects-tag-list">
+                {#for k,l in j.tags
+                <span class="cmpt-projects-tag">{#value l}</span>
+                }
+            </div>
+            <div class="cmpt-projects-link">
+                <a target="_blank" rel="noopener noreferrer" href="{#value j.github_link}">{#include ./action.html body="Github"}</a>
+            </div>
+        </div>
+        }
+    </div>
+
+    <div class="cmpt-projects-more">
+        <a target="_blank" rel="noopener norefferer" href="https://github.com/nishantHolla?tab=repositories"}{#include ./action.html body="More on Github"}</a>
+    </div>
+</section>
+
+{#once <script defer>
+
+const ProjectLanguageButtons = document.getElementsByClassName("cmpt-projects-language-button");
+const ProjectCards = document.getElementsByClassName("cmpt-projects-card");
+
+for (const button of ProjectLanguageButtons) {
+    button.addEventListener("click", () => {
+        showOnly(button.dataset.language);
+    })
+}
+
+function showOnly(language) {
+    for (const card of ProjectCards) {
+        if (card.dataset.language === language) {
+            card.style.display = "flex";
+        }
+        else {
+            card.style.display = "none";
+        }
+    }
+
+    for (const button of ProjectLanguageButtons) {
+        if (button.dataset.language === language) {
+            button.querySelector(".cmpt-action").dataset.isActive = "1";
+        }
+        else {
+            button.querySelector(".cmpt-action").dataset.isActive = "0";
+        }
+    }
+}
+
+showOnly("c");
+
+</script>
+}
