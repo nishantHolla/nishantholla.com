@@ -85,6 +85,16 @@ body[data-theme="light"] .cmpt-projects-tag {
     align-items: center;
 }
 
+@media (max-width: 450px) {
+
+    .cmpt-projects-header {
+        flex-flow: column;
+        align-items: start;
+        margin-bottom: 20px;
+    }
+
+}
+
 </style>}
 
 <section id="projects">
@@ -126,11 +136,11 @@ const ProjectCards = document.getElementsByClassName("cmpt-projects-card");
 
 for (const button of ProjectLanguageButtons) {
     button.addEventListener("click", () => {
-        showOnly(button.dataset.language);
+        showOnlyProject(button.dataset.language);
     })
 }
 
-function showOnly(language) {
+function showOnlyProject(language) {
     for (const card of ProjectCards) {
         if (card.dataset.language === language) {
             card.style.display = "flex";
@@ -150,7 +160,7 @@ function showOnly(language) {
     }
 }
 
-showOnly("c");
+showOnlyProject("c");
 
 </script>
 }

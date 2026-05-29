@@ -1,0 +1,146 @@
+{#once <style>
+
+.cmpt-activities-container {
+    border-left: 5px solid;
+    border-left-color: var(--clr-mid);
+
+    padding-top: 1rem;
+    padding-left: 2rem;
+
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+}
+
+.cmpt-activities-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cmpt-activities-year-list {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.cmpt-activity-title {
+    font-size: 1.6rem;
+}
+
+.cmpt-activity-card {
+    p {
+        margin-left: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .cmpt-activities-header {
+        flex-flow: column;
+        align-items: start;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .cmpt-activity-card {
+        p {
+            margin-left: 0rem;
+        }
+    }
+
+}
+
+</style>}
+
+<section id="activities">
+    <div class="cmpt-activities-header">
+        <h2 class="section-heading">Activities</h2>
+        <div class="cmpt-activities-year-list">
+            <button class="cmpt-activities-year-button" data-year="2025">{#include ./action.html body="2025"}</button>
+            <button class="cmpt-activities-year-button" data-year="2024">{#include ./action.html body="2024"}</button>
+            <button class="cmpt-activities-year-button" data-year="2023">{#include ./action.html body="2023"}</button>
+        </div>
+    </div>
+
+    <div class="cmpt-activities-container">
+        {#with file as ../contents/activities/2025-06-Research-Intern-At-CRAIS.md
+        <div class="cmpt-activity-card" data-year="{#value file.year}" data-month="{#value file.month}">
+            <h3 class="cmpt-activity-title">{#value file.date} - {#value file.title}</h3>
+            {#value file.content}
+        </div>
+        }
+
+        {#with file as ../contents/activities/2025-03-Won-CIDECODE-Hackathon.md
+        <div class="cmpt-activity-card" data-year="{#value file.year}" data-month="{#value file.month}">
+            <h3 class="cmpt-activity-title">{#value file.date} - {#value file.title}</h3>
+            {#value file.content}
+        </div>
+        }
+
+        {#with file as ../contents/activities/2024-10-Won-Kodikon-Hackathon.md
+        <div class="cmpt-activity-card" data-year="{#value file.year}" data-month="{#value file.month}">
+            <h3 class="cmpt-activity-title">{#value file.date} - {#value file.title}</h3>
+            {#value file.content}
+        </div>
+        }
+
+        {#with file as ../contents/activities/2024-09-Course-On-Building-A-Mordern-Computer.md
+        <div class="cmpt-activity-card" data-year="{#value file.year}" data-month="{#value file.month}">
+            <h3 class="cmpt-activity-title">{#value file.date} - {#value file.title}</h3>
+            {#value file.content}
+        </div>
+        }
+
+        {#with file as ../contents/activities/2024-04-Course-On-Competitive-Programming-Unveiled.md
+        <div class="cmpt-activity-card" data-year="{#value file.year}" data-month="{#value file.month}">
+            <h3 class="cmpt-activity-title">{#value file.date} - {#value file.title}</h3>
+            {#value file.content}
+        </div>
+        }
+
+        {#with file as ../contents/activities/2023-10-Course-On-Deep-Dive-Into-Gen-AI.md
+        <div class="cmpt-activity-card" data-year="{#value file.year}" data-month="{#value file.month}">
+            <h3 class="cmpt-activity-title">{#value file.date} - {#value file.title}</h3>
+            {#value file.content}
+        </div>
+        }
+    </div>
+</section>
+
+{#once <script defer>
+
+const ActivityYearButtons = document.getElementsByClassName("cmpt-activities-year-button")
+const ActivityCard = document.getElementsByClassName("cmpt-activity-card")
+
+for (const button of ActivityYearButtons) {
+    button.addEventListener("click", () => {
+        showOnlyActivity(button.dataset.year);
+    })
+}
+
+function showOnlyActivity(year) {
+    for (const card of ActivityCard) {
+        if (card.dataset.year === year) {
+            card.style.display = "block";
+        }
+        else {
+            card.style.display = "none";
+        }
+    }
+
+    for (const button of ActivityYearButtons) {
+        if (button.dataset.year === year) {
+            button.querySelector(".cmpt-action").dataset.isActive = "1";
+        }
+        else {
+            button.querySelector(".cmpt-action").dataset.isActive = "0";
+        }
+    }
+}
+
+showOnlyActivity("2025");
+</script>}
