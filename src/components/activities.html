@@ -140,7 +140,10 @@ function showOnlyActivity(year) {
             button.querySelector(".cmpt-action").dataset.isActive = "0";
         }
     }
+
+    localStorage.setItem("activity_year", year);
 }
 
-showOnlyActivity("2025");
+const year = localStorage.getItem("activity_year") || "2025";
+showOnlyActivity(year);
 </script>}

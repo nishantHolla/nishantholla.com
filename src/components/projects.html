@@ -158,9 +158,11 @@ function showOnlyProject(language) {
             button.querySelector(".cmpt-action").dataset.isActive = "0";
         }
     }
+
+    localStorage.setItem("projects_language", language);
 }
 
-showOnlyProject("c");
-
+const language = localStorage.getItem("projects_language") || "c";
+showOnlyProject(language);
 </script>
 }
