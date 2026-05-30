@@ -35,6 +35,13 @@
         "language": "cpp"
     },
     {
+        "title": "Ruttle",
+        "description": "<p>Ruttle is a fast static templating engine written in Rust for generating HTML, CSS, and other text-based assets. It is designed for building static websites with minimal runtime overhead.</p>",
+        "tags": ["Rust", "Templating Engine", "Web"],
+        "github_link": "https://github.com/nishantHolla/ruttle",
+        "language": "rust"
+    },
+    {
         "title": "marl-football",
         "description": "<p>MARL Football is a multi-agent reinforcement learning project focused on training autonomous agents to learn cooperative strategies in a simulated football environment. The project explores how multiple agents can interact, coordinate, and optimize decision-making through reinforcement learning techniques, enabling emergent team-based behaviors in a dynamic competitive setting.</p>",
         "tags": ["Python", "Reinforcement Learning", "Multi-Agent Systems"],

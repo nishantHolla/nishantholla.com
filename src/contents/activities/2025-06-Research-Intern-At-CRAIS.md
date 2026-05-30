@@ -7,7 +7,7 @@ year: 2025
 
 <p class="intro">
     Worked as a research intern at
-    <a target="_blank" rel="noopener noreferrer" href="https://research.pes.edu/crais/">
+    <a target="_blank" rel="noopener noreferrer" href="https://research.pes.edu/centre/crais/">
         {#include ../../components/action.html body="cRAIS"}
     </a>
     for two months, focusing on multi-agent reinforcement learning in a football simulation environment.
