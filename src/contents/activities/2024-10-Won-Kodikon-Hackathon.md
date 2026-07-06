@@ -1,5 +1,5 @@
 ---
-title: "Wok Kodikon Hackathon"
+title: "Won Kodikon Hackathon"
 date: "October 2024"
 month: "October"
 year: 2024
