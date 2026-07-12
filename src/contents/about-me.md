@@ -2,9 +2,10 @@
 title: "About Me"
 ---
 
-<p>Hi! I'm Nishant Holla, a Computer Science student at PES University.
-I'm passionate about building and understanding systems, and I'm currently exploring Operating Systems and Machine Learning.</p>
+Hi! I'm Nishant Holla, a Computer Science student at PES University with a passion for building
+software and understanding how it works beneath the surface.
 
-<p>I enjoy hands-on projects and learning by doing - from developing software tools to experimenting with AI models.
-Through my work, I aim to tackle challenging problems and create solutions that are both efficient and practical.</p>
-
+I enjoy learning by building and taking on projects that push me to explore new ideas, technologies,
+and different areas of computer science. Whether I'm creating developer tools, experimenting with
+new approaches, or solving challenging problems, I strive to build software that is simple,
+efficient, and practical.
