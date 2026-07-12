@@ -5,7 +5,7 @@
     border-left-color: var(--clr-mid);
 
     padding-top: 1rem;
-    padding-left: 2rem;
+    padding-left: clamp(1rem, 2vw, 2rem);
 
     display: flex;
     flex-flow: column;
@@ -24,13 +24,9 @@
     flex-wrap: wrap;
 }
 
-.cmpt-activity-title {
-    font-size: 1.6rem;
-}
-
 .cmpt-activity-card {
     p {
-        margin-left: 2rem;
+        margin-left: 1rem;
     }
 }
 
